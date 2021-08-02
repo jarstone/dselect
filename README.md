@@ -2,7 +2,7 @@
 
 Dropdown select box for bootstrap 5
 
-[Demo](https://dselect.netlify.app)
+[Demo](https://dselect.vercel.app)
 
 ## Features
 

@@ -1,5 +1,5 @@
 {
-  "name": "dselect",
+  "name": "@jarstone/dselect",
   "version": "1.0.0",
   "description": "Dropdown select box for bootstrap 5",
   "repository": {

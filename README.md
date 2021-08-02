@@ -6,14 +6,15 @@ Dropdown select box for bootstrap 5
 
 ## Features
 
-- Search
+- Placeholder
 - Multiple
-- Clearable
+- Search
 - Creatable
+- Clearable
 - Sizing
 - Validation
 
-  
+
 ## Installation
 
 Install dselect with npm
@@ -21,7 +22,7 @@ Install dselect with npm
 ```bash
 npm install dselect
 ```
-    
+
 Install from cdn
 ```html
 <link rel="stylesheet" href="https://unpkg.com/dselect/dist/css/dselect.css">
@@ -55,7 +56,7 @@ const config = {
 dselect(document.querySelector('#dselect-example'), config)
 ```
 
-option can be replaced with "data-dselect-*" attribute
+options can also be set in "data-dselect-*" attribute
 
 ```html
 <select data-dselect-search="true" data-dselect-creatable="true" data-dselect-clearable="true" data-dselect-max-height="300px" data-dselect-size="sm" class="form-select" id="dselect-example">

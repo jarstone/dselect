@@ -25,8 +25,8 @@ npm install dselect
 
 Install from cdn
 ```html
-<link rel="stylesheet" href="https://unpkg.com/dselect/dist/css/dselect.css">
-<script src="https://unpkg.com/dselect/dist/js/dselect.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@jarstone/dselect/dist/css/dselect.css">
+<script src="https://unpkg.com/@jarstone/dselect/dist/js/dselect.js"></script>
 ```
 ## Usage/Examples
 

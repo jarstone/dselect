@@ -79,8 +79,8 @@ $dselect-clear-icon-width: .625rem;
   // Search input
   .form-control {
     border-radius: 0;
-    box-shadow: none;
-    border-color: $input-border-color;
+    box-shadow: none !important;
+    border-color: $input-border-color !important;
     padding: $dropdown-item-padding-y subtract($form-select-padding-x / 2, $input-border-width);
     font-size: inherit;
   }

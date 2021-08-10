@@ -20,7 +20,7 @@ Dropdown select box for bootstrap 5
 Install dselect with npm
 
 ```bash
-npm install dselect
+npm install @jarstone/dselect
 ```
 
 Install from cdn

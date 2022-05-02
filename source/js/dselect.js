@@ -156,21 +156,28 @@ function dselect(el, option = {}) {
   }
 
   function itemTags(options) {
-    let items = []
-    for (const option of options) {
-      if (option.tagName === 'OPTGROUP') {
-        items.push(`<h6 class="dropdown-header">${option.getAttribute('label')}</h6>`)
+    let items = [];
+    for (const option2 of options) {
+      if (option2.tagName === "OPTGROUP") {
+        items.push(`<h6 class="dropdown-header">${option2.getAttribute("label")}</h6>`);
       } else {
-        const hidden = isPlaceholder(option) ? ' hidden' : ''
-        const active = option.selected ? ' active' : ''
-        const disabled = el.multiple && option.selected ? ' disabled' : ''
-        const value = option.value
-        const text = option.textContent
-        items.push(`<button${hidden} class="dropdown-item${active}" data-dselect-value="${value}" type="button" onclick="dselectUpdate(this, '${classElement}', '${classToggler}')"${disabled}>${text}</button>`)
+        const hidden = isPlaceholder(option2) ? " hidden" : "";
+        const active = option2.selected ? " active" : "";
+        const disabled = option2.selected ? " disabled" : "";
+        const disabledvalue = option2.getAttribute("disabled")
+        disableitem = '';
+        if (disabledvalue !== null) {
+          disableitem = "disabled='true'";
+        } else {
+          disableitem = "";
+        }
+        const value = option2.value;
+        const text = option2.textContent;
+        items.push(`<button${hidden} class="dropdown-item${active}"  ${disableitem} data-dselect-value="${value}" type="button" onclick="dselectUpdate(this, '${classElement}', '${classToggler}')" ${disabled}>${text}</button>`);
       }
     }
-    items = items.join('')
-    return items
+    items = items.join("");
+    return items;
   }
 
   function createDom() {

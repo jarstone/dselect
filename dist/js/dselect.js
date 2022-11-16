@@ -51,6 +51,19 @@ function dselectSearch(event, input, classElement, classToggler, creatable) {
       item.classList.add("d-none");
     }
   }
+  for (const header of headers) {
+    const filterText = header.textContent;
+    if (filterText.toLowerCase().indexOf(filterValue) > -1) {
+      header.classList.remove("d-none");
+      let item = header;
+      while (item = item.nextElementSibling) {
+        if (item.classList.contains("dropdown-header")) {
+          break;
+        }
+        item.classList.remove("d-none");
+      }
+    }
+  }
   const found = Array.from(items).filter((i) => !i.classList.contains("d-none") && !i.hasAttribute("hidden"));
   if (found.length < 1) {
     noResults.classList.remove("d-none");

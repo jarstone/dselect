@@ -99,11 +99,13 @@ function dselect(el, option = {}) {
   const creatable = attrBool('creatable') || option.creatable || defaultCreatable
   const clearable = attrBool('clearable') || option.clearable || defaultClearable
   const maxHeight = el.dataset.dselectMaxHeight || option.maxHeight || defaultMaxHeight
+  const placeholder = option.placeholder || "Search"
+  const noResults = option.noResults || "No results found"
   let size = el.dataset.dselectSize || option.size || defaultSize
   size = size !== '' ? ` form-select-${size}` : ''
   const classToggler = `form-select${size}`
 
-  const searchInput = search ? `<input onkeydown="return event.key !== 'Enter'" onkeyup="dselectSearch(event, this, '${classElement}', '${classToggler}', ${creatable})" type="text" class="form-control" placeholder="Search" autofocus>` : ''
+  const searchInput = search ? `<input onkeydown="return event.key !== 'Enter'" onkeyup="dselectSearch(event, this, '${classElement}', '${classToggler}', ${creatable})" type="text" class="form-control" placeholder="${placeholder}" autofocus>` : ''
 
   function attrBool(attr) {
     const attribute = `data-dselect-${attr}`
@@ -199,7 +201,7 @@ function dselect(el, option = {}) {
           <div class="dselect-items" style="max-height:${maxHeight};overflow:auto">
             ${itemTags(el.querySelectorAll('*'))}
           </div>
-          <div class="${classNoResults} d-none">No results found</div>
+          <div class="${classNoResults} d-none">${noResults}</div>
         </div>
       </div>
       ${clearBtn}
